@@ -1,0 +1,38 @@
+# Define a function to calculate the clothing size
+def calculate_clothing_size(weight):
+    """
+    Calculate the clothing size based on body weight.
+
+    Args:
+        weight (float): The body weight in kilograms (kg)
+
+    Returns:
+        str: The clothing size (e.g., S, M, L, XL)
+    """
+    if weight < 40:
+        clothing_size = "XS"
+    elif weight < 50:
+        clothing_size = "S"
+    elif weight < 60:
+        clothing_size = "M"
+    elif weight < 70:
+        clothing_size = "L"
+    else:
+        clothing_size = "XL"
+    return clothing_size
+
+# Get user input for weight
+weight = float(input("Enter your weight (kg): "))
+
+# Calculate and print the clothing size
+clothing_size = calculate_clothing_size(weight)
+print(f"Your clothing size is {clothing_size}.")
+
+# Table of clothing sizes based on body weight
+print("\nTable of Clothing Sizes Based on Body Weight:")
+print("Weight (kg)\tClothing Size")
+print("Below 40\tXS")
+print("40-50\tS")
+print("50-60\tM")
+print("60-70\tL")
+print("Above 70\tXL")
